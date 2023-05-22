@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Test(){
+            // 첫 번째 방법
+            var button, button1;
+
+            button = document.getElementById("button");
+            button.onclick = function(){
+                document.body.style.background = "yellow"; 
+            };
+
+            button1 = document.getElementById("button1");
+            button1.onclick = function(){
+                document.body.style.background = "white"; 
+            };
+        };
+        // 두 번째 방법
+        //     button = document.getElementById("button");
+        //     button.onclick = change;
+
+        //     button1 = document.getElementById("button1");
+        //     button1.onclick = origin;
+        // };
+
+        // function change(){
+        //     document.body.style.background = "yellow";
+        // };
+
+        // function origin(){
+        //     document.body.style.background = "blue";
+        // };
+    </script>
+</head>
+<body onload="Test()">
+    <!-- 배경색 변경 버튼 -->
+    <button id="button">변경</button> 
+    <!-- 배경색 원래대로 돌아오기 -->
+    <button id="button1">복구</button>
+</body>
+</html>
