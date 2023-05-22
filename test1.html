@@ -19,13 +19,13 @@
 </head>
 <body>
     <form action="">
-        <select id="hero">
+        <select id="hero" onchange="changeImgs()"> <!-- onchange속성추가하면 버튼 생성안해도됨 -->
             <option value="imgs/짱구.jpg">crayon</option>
             <option value="imgs/흰둥이.jpg">whitedog</option>
             <option value="imgs/맹구.jpg">maeng</option>
             <option value="imgs/훈이.jpg">hooni</option>
         </select>
-        <button id="btn" onclick="changeImgs()" type="button">사진 선택 후 클릭</button>
+        <!-- <button id="btn" onclick="changeImgs()" type="button">사진 선택 후 클릭</button> -->
         <br>
         <img id="imgCrayon" src="imgs/짱구.jpg">
     </form>
