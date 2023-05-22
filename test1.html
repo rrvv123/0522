@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImgs(){
+            var select1 = document.getElementById("hero");
+            var img1 = document.getElementById("imgCrayon");
+            var path = select1.options[select1.selectedIndex].value; //대괄호 안에 있는건 배열임.
+
+            img1.src = path;
+            img1.width = 400;
+            img1.height = 350;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <select id="hero">
+            <option value="imgs/짱구.jpg">crayon</option>
+            <option value="imgs/흰둥이.jpg">whitedog</option>
+            <option value="imgs/맹구.jpg">maeng</option>
+            <option value="imgs/훈이.jpg">hooni</option>
+        </select>
+        <button id="btn" onclick="changeImgs()" type="button">사진 선택 후 클릭</button>
+        <br>
+        <img id="imgCrayon" src="imgs/짱구.jpg">
+    </form>
+</body>
+</html>
