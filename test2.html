@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var imgCrayon;
+        function changeImgs(){
+            var radioArr = document.getElementsByName("example");
+
+            for (var i = 0; i < radioArr.length; i++){
+                if (radioArr[i].checked){
+                    img1.src = radioArr[i].value;
+                };
+            };
+        };
+
+        function init(){
+            img1 = document.getElementById("imgCrayon");
+            img1.src = "imgs/짱구.jpg";
+            img1.width = 400;
+            img1.height = 350;
+        };
+    </script>
+</head>
+<body onload="init()">
+    <form action="">
+            <input type="radio" name="example" value="imgs/짱구.jpg">
+            짱구
+            <input type="radio" name="example" value="imgs/흰둥이.jpg">
+            흰둥이
+            <input type="radio" name="example" value="imgs/맹구.jpg">
+            맹구
+            <input type="radio" name="example" value="imgs/훈이.jpg">
+            훈이
+            <button type="button" onclick="changeImgs()">선택 후 클릭</button>
+        <br>
+        <img id="imgCrayon">
+    </form>
+</body>
+</html>
