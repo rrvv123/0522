@@ -10,12 +10,16 @@
         function nowClock(){
             hEl = document.getElementById("clock");
             setInterval( printClock(), 1000);
-        }
+            //serInterval(function(){
+            //  var now = new Date();
+            //  hEl.innerHTML = now.toString();    
+            //}, 1000);
+        };
 
         function printClock(){
             var now = new Date();
             hEl.innerHTML = now.toString();
-        }
+        };
     </script>
 </head>
 <body onload="nowClock()">
